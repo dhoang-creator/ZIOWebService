@@ -1,4 +1,10 @@
-import webServices.{ConnectionPool, EmailService, UserDatabase, UserSubscription}
+import Microservice.{EmailService, UserDatabase, UserSubscription}
+import zio.{ZIO, ZLayer}
+
+import java.time.Clock
+import java.util.Random
+import java.util.concurrent.TimeUnit
+import scala.concurrent.duration.SECONDS
 
 object ZLayers {
 
@@ -11,7 +17,7 @@ object ZLayers {
   val userSubscriptionServiceLayer: ZLayer[UserDatabase with EmailService, Nothing, UserSubscription] =
     ZLayer.fromFunction(UserSubscription.create _)
 
-  val databaseLayerFull: ZLayer[Any, Nothing, UserDatabase] = connectionPoolLayer >>> databaseLaye
+  val databaseLayerFull: ZLayer[Any, Nothing, UserDatabase] = connectionPoolLayer >>> databaseLayer
   val subscriptionRequirementsLayer: ZLayer[Any, Nothing, UserDatabase with EmailService] = databaseLayerFull ++ EmailServiceLayer
   val userSubscriptionLayer: ZLayer[Any, Nothing, UserSubscription] =
     subscriptionRequirementsLayer >>> userSubscriptionServiceLayer
@@ -32,5 +38,4 @@ object ZLayers {
   val randomValue = Random.nextInt
   val sysVariable = System.env("HADOOP HOME")
   val printlnEffect = Console.printline("This is ZIO")
-
 }

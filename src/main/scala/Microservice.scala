@@ -1,5 +1,8 @@
-object webServices extends ZIOAppDefault {
+import zio.{Task, ZIO, ZIOAppDefault, ZLayer}
 
+object Microservice extends ZIOAppDefault {
+
+  // should a validator be built in with regex patterns for the email address?
   case class User(name: String, email: String)
 
   class UserSubscription(emailService: EmailService, userDatabase) {
@@ -43,23 +46,6 @@ object webServices extends ZIOAppDefault {
       ZLayer.fromFunction(create _)
   }
 
-  class ConnectionPool(nConnections: Int) {
-    def get: Task[Connection] =
-      ZIO.succeed(println("Acquired connection")) *> ZIO.succeed(Connection())
-  }
-
-  object ConnectionPool {
-    def create(nConnection: Int) =
-      new ConnectionPool(nConnection)
-    def live(nConnections: Int): ZLayer[Any, Nothing, ConnectionPool] =
-      ZLayer.succeed(create(nConnections))
-  }
-
-  case class Connection() {
-    def runQuery(query: String): Task[Unit] =
-      ZIO.succeed(println(s"Executing query: $query"))
-  }
-
   val subscriptionService = ZIO.succeed(
     UserSubscription.create(
       EmailService.create(),
@@ -79,8 +65,6 @@ object webServices extends ZIOAppDefault {
     _ <- subscribe(User("Bon Jovi", "jon@rockthejvm.com"))
   } yield ()
 
-
-
   val runnableProgram_v2 = program_v2.provide(
     UserSubscription.live,
     EmailService.live,
@@ -88,7 +72,7 @@ object webServices extends ZIOAppDefault {
     ConnectionPool.live(10),
     ZLayer.Debug.tree
   )
-  
+
   def run = runnableProgram_v2
 }
 

@@ -7,7 +7,7 @@ lazy val root = (project in file("."))
     name := "zioWeb"
   )
 
-lazy val zioVersion = "2.0.2"
+lazy val zioVersion = "2.0.6"
 
 libraryDependencies ++= Seq(
   "dev.zio" %% "zio" % zioVersion,
