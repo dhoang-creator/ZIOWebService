@@ -13,7 +13,9 @@ libraryDependencies ++= Seq(
   "dev.zio" %% "zio" % zioVersion,
   "dev.zio" %% "zio-test" % zioVersion,
   "dev.zio" %% "zio-test-sbt" % zioVersion,
-  "dev.zio" %% "zio-streams" % zioVersion
+  "dev.zio" %% "zio-streams" % zioVersion,
+  "com.typesafe.slick" %% "slick" % "3.4.1",
+  "org.slf4j" % "slf4j-nop" % "2.0.5"
 )
 
 testFrameworks += TestFramework("zio.test.sbt.ZTestFramework")

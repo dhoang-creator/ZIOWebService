@@ -1,4 +1,4 @@
-import UserInput.User
+import UserSubscription.User
 import zio.{Task, ZLayer}
 
 /**

@@ -1,4 +1,4 @@
-import UserInput.{EmailService, User, UserSubscription, subscribe}
+import UserSubscription.{EmailService, User, UserSubscription, subscribe}
 import zio.{ZIOAppDefault, ZLayer}
 
 /**

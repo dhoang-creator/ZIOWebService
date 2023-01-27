@@ -1,9 +1,14 @@
 import zio.{Task, ZIO, ZIOAppDefault, ZLayer}
 
-object UserInput {
+object UserSubscription {
+
+  /**
+   * Can we just input the vals from the console in either the case class or the object which will be utilised later
+   * It's not as primitive as C wherein you have to create a parser but we do have to keep aware of how the data is being plugged in? Raw data?
+   */
 
   // should a validator be built in with regex patterns for the email address?
-  case class User(name: String, email: String)
+  case class User(val name: String = scala.io.StdIn.readLine(), val email: String = scala.io.StdIn.readLine())
 
   class UserSubscription(emailService: EmailService, userDatabase) {
     def subscribeUser(user: User): Task[Unit] =
