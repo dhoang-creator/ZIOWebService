@@ -1,4 +1,4 @@
-import Microservice.{EmailService, UserDatabase, UserSubscription}
+import UserInput.{EmailService, UserDatabase, UserSubscription}
 import zio.{ZIO, ZLayer}
 
 import java.time.Clock
