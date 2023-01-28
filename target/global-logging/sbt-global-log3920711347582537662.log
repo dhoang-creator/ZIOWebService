@@ -1,0 +1,122 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.6.2 (AdoptOpenJDK Java 1.8.0_292)
+[debug]       Load.loadUnit: plugins took 575.844065ms
+[debug]       Load.loadUnit: defsScala took 3.491843ms
+[debug] [Loading] Scanning directory /Users/duyhoang/.sbt/1.0/plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/duyhoang/.sbt/1.0/plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 497.438198 ms
+[debug]           Load.resolveProject(global-plugins) took 373.267727ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /Users/duyhoang/.sbt/1.0/plugins, plugins: List(<none>))) took 1045.644283ms
+[debug] [Loading] Done in /Users/duyhoang/.sbt/1.0/plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 1143.367777ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.587496ms
+[debug]     Load.loadUnit(file:/Users/duyhoang/.sbt/1.0/plugins/, ...) took 1744.437311ms
+[debug]   Load.apply: load took 8106.25911ms
+[debug]   Load.apply: resolveProjects took 36.737141ms
+[debug]   Load.apply: finalTransforms took 428.092198ms
+[debug]   Load.apply: config.delegates took 143.064564ms
+[debug]   Load.apply: Def.make(settings)... took 1705.740634ms
+[debug]   Load.apply: structureIndex took 419.486352ms
+[debug]   Load.apply: mkStreams took 5.274885ms
+[info] loading global plugins from /Users/duyhoang/.sbt/1.0/plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 22748.687582ms
+[debug]           Load.loadUnit: plugins took 52.830158ms
+[debug]           Load.loadUnit: defsScala took 0.01804ms
+[debug] [Loading] Scanning directory /Users/duyhoang/Desktop/zioWeb/project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/duyhoang/Desktop/zioWeb/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 6.484912 ms
+[debug]               Load.resolveProject(zioweb-build) took 1.729758ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id zioweb-build, base: /Users/duyhoang/Desktop/zioWeb/project, plugins: List(<none>))) took 10.031602ms
+[debug] [Loading] Done in /Users/duyhoang/Desktop/zioWeb/project, returning: (zioweb-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 17.142471ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.02699ms
+[debug]         Load.loadUnit(file:/Users/duyhoang/Desktop/zioWeb/project/, ...) took 114.868618ms
+[debug]       Load.apply: load took 117.314783ms
+[debug]       Load.apply: resolveProjects took 0.179584ms
+[debug]       Load.apply: finalTransforms took 28.406802ms
+[debug]       Load.apply: config.delegates took 0.623663ms
+[debug]       Load.apply: Def.make(settings)... took 258.552009ms
+[debug]       Load.apply: structureIndex took 146.97084ms
+[debug]       Load.apply: mkStreams took 0.003425ms
+[info] loading project definition from /Users/duyhoang/Desktop/zioWeb/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 1059.641298ms
+[debug]     Load.loadUnit: defsScala took 0.005924ms
+[debug] [Loading] Scanning directory /Users/duyhoang/Desktop/zioWeb
+[debug]       Load.loadUnit: mkEval took 20.96213ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 3.219412 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 4.599836ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: /Users/duyhoang/Desktop/zioWeb, plugins: List(<none>))) took 16.358644ms
+[debug] [Loading] Done in /Users/duyhoang/Desktop/zioWeb, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 8944.075623ms
+[debug]     Load.loadUnit: cleanEvalClasses took 27.739639ms
+[debug]   Load.loadUnit(file:/Users/duyhoang/Desktop/zioWeb/, ...) took 10032.693592ms
+[debug] Load.apply: load took 10038.241481ms
+[debug] Load.apply: resolveProjects took 0.387025ms
+[debug] Load.apply: finalTransforms took 93.656403ms
+[debug] Load.apply: config.delegates took 2.630682ms
+[debug] Load.apply: Def.make(settings)... took 216.411026ms
+[debug] Load.apply: structureIndex took 95.415167ms
+[debug] Load.apply: mkStreams took 0.004006ms
+[info] set current project to zioWeb (in build file:/Users/duyhoang/Desktop/zioWeb/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[info] sbt server started at local:///Users/duyhoang/.sbt/1.0/server/63ba58cd722bd2caed70/sock
+[debug] Writing bsp connection file
+[info] started sbt server
