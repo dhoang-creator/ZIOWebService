@@ -1,5 +1,7 @@
 import UserSubscription.{EmailService, User, UserSubscription, subscribe}
 import zio.{ZIOAppDefault, ZLayer}
+import Connection.{ConnectionPool}
+import Persistence.{UserDatabase}
 
 /**
  * The dependency injection for each of the files seems to be all over the place, what can we do to ensure that all bases are covered?
@@ -23,5 +25,4 @@ object Main extends ZIOAppDefault{
   )
 
   def run = runnableProgram_v2
-
 }

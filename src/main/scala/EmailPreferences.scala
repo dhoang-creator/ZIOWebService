@@ -1,5 +1,8 @@
+import slick.dbio.DBIO
+
 import scala.concurrent.ExecutionContext
 
+// note that the below has an Effectual exposure to reading and writing to the DB
 object EmailPreferences {
 
   trait Emails[F[_]]{
@@ -8,7 +11,7 @@ object EmailPreferences {
     def findEmail(email: Email): F[Option[Email]]
   }
 
-  class UserRepositoy(emailRepository: EmailRepository)(
+  class UserRepository(emailRepository: EmailRepository)(
                      implicit ec: ExecutionContext) extends Users[DBIO] {
     override def createUser(primaryEmail: Email, userProfile: UserProfile) = {
       val row = DbUser.from(primaryEmail, userProfile)

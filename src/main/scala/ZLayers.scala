@@ -1,10 +1,12 @@
-import UserSubscription.{EmailService, UserDatabase, UserSubscription}
+import UserSubscription.{EmailService, UserSubscription}
 import zio.{ZIO, ZLayer}
 
 import java.time.Clock
 import java.util.Random
 import java.util.concurrent.TimeUnit
 import scala.concurrent.duration.SECONDS
+import Connection.{ConnectionPool}
+import Persistence.{UserDatabase}
 
 object ZLayers {
 

@@ -1,5 +1,6 @@
 import UserSubscription.User
 import zio.{Task, ZLayer}
+import Connection.{ConnectionPool}
 
 /**
  * Do we need to inject a JDBC Layer here to interact with the data that is being inputted? Slick -> better composability

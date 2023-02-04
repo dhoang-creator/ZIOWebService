@@ -1,4 +1,6 @@
 import zio.{Task, ZIO, ZIOAppDefault, ZLayer}
+import Persistence.{UserDatabase}
+import Connection.{ConnectionPool}
 
 object UserSubscription {
 
@@ -20,7 +22,7 @@ object UserSubscription {
 
   object UserSubscription {
     def create(emailService: EmailService, userDatabase: UserDatabase) =
-      new UserSubscription(emailService, userDatabase1)
+      new UserSubscription(emailService, userDatabase)
 
     val live: ZLayer[EmailService with UserDatabase, Nothing, UserSubscription] =
       ZLayer.fromFunction(create _)
