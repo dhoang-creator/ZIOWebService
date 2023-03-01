@@ -1,6 +1,8 @@
-import zio.{Task, ZIO, ZIOAppDefault, ZLayer}
-import Persistence.{UserDatabase}
-import Connection.{ConnectionPool}
+package API
+
+import Connection.Connection.ConnectionPool
+import Connection.UserDatabase
+import zio.{Task, ZIO, ZLayer}
 
 object UserSubscription {
 

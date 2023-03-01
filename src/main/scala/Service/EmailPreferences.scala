@@ -1,4 +1,4 @@
-import slick.dbio.DBIO
+package Service
 
 import scala.concurrent.ExecutionContext
 

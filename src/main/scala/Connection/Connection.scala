@@ -1,4 +1,5 @@
-import Persistence.UserDatabase
+package Connection
+
 import zio.{Task, ZLayer}
 
 // the aim here is to build in the ConnectionPool to be used in the Persistence Layer
