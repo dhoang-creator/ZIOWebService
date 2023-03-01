@@ -2,9 +2,11 @@ package Service
 
 import scala.concurrent.ExecutionContext
 
-// note that the below has an Effectual exposure to reading and writing to the DB
-object EmailPreferences {
+case class Email(EmailAddress: String)
+case class EmailRepository(id: String, EmailAddress: String)
+case class EmailAlreadyExists(Error: String)
 
+// note that the below has an Effectual exposure to reading and writing to the DB
   trait Emails[F[_]]{
     def save(email: Email): F[Either[EmailAlreadyExists.type, Email]]
     def known(email: Email): F[Boolean]
@@ -12,7 +14,7 @@ object EmailPreferences {
   }
 
   class UserRepository(emailRepository: EmailRepository)(
-                     implicit ec: ExecutionContext) extends Users[DBIO] {
+                     implicit ec: ExecutionContext) extends Emails[DBIO] {
     override def createUser(primaryEmail: Email, userProfile: UserProfile) = {
       val row = DbUser.from(primaryEmail, userProfile)
       (UsersTable += row).map(PersistedUser(_, row))
@@ -24,6 +26,5 @@ object EmailPreferences {
         new IllegalStateException(s"More than one user uses email: $email")
       )
     }
-  }
 
 }
